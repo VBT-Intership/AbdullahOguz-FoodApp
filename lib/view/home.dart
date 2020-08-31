@@ -42,47 +42,51 @@ class HomeView extends StatelessWidget {
             searhArea(),
             horizontalListArea(context),
             popularCard(),
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.446,
-              child: Padding(
-                padding: EdgeInsets.only(top: 20, left: 30, right: 30),
-                child: ListView(
-                  children: [
-                    VerticalFoodCard(
-                        "https://pbs.twimg.com/media/DrjlDZnX0AAK8xJ.jpg",
-                        "Banana Goreng",
-                        "Gorengan",
-                        "Makanan Ringan",
-                        "2.500",
-                        SOFT_YELLOW,
-                        DARK_YELLOW,
-                        SOFT_BLUE,
-                        DARK_BLUE),
-                    VerticalFoodCard(
-                        "https://www.hazz.com.tr/Uploads/UrunResimleri/buyuk/karisik-makaron-kutusu-no1-81-adet-------cfe1.jpg",
-                        "Donat Cilik",
-                        "Gorengan",
-                        "Donat",
-                        "12.000",
-                        SOFT_YELLOW,
-                        DARK_YELLOW,
-                        SOFT_RED,
-                        DARK_RED),
-                    VerticalFoodCard(
-                        "https://envato-shoebox-0.imgix.net/b576/fcd3-dd40-428f-aa6e-7103ca61e8e4/1103+%2829%29.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=5576d998ec46e50de8fe73c47844f0ad",
-                        "Copy anget",
-                        "Ombehan",
-                        "Ber air",
-                        "4.500",
-                        SOFT_GREEN,
-                        DARK_GREEN,
-                        SOFT_BLUE,
-                        DARK_BLUE)
-                  ],
-                ),
-              ),
-            )
+            verticalListArea(context)
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container verticalListArea(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.446,
+      child: Padding(
+        padding: EdgeInsets.only(top: 20, left: 30, right: 30),
+        child: ListView(
+          children: [
+            VerticalFoodCard(
+                "https://pbs.twimg.com/media/DrjlDZnX0AAK8xJ.jpg",
+                "Banana Goreng",
+                "Gorengan",
+                "Makanan Ringan",
+                "2.500",
+                SOFT_YELLOW,
+                DARK_YELLOW,
+                SOFT_BLUE,
+                DARK_BLUE),
+            VerticalFoodCard(
+                "https://www.hazz.com.tr/Uploads/UrunResimleri/buyuk/karisik-makaron-kutusu-no1-81-adet-------cfe1.jpg",
+                "Donat Cilik",
+                "Gorengan",
+                "Donat",
+                "12.000",
+                SOFT_YELLOW,
+                DARK_YELLOW,
+                SOFT_RED,
+                DARK_RED),
+            VerticalFoodCard(
+                "https://envato-shoebox-0.imgix.net/b576/fcd3-dd40-428f-aa6e-7103ca61e8e4/1103+%2829%29.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=1600&s=5576d998ec46e50de8fe73c47844f0ad",
+                "Copy anget",
+                "Ombehan",
+                "Ber air",
+                "4.500",
+                SOFT_GREEN,
+                DARK_GREEN,
+                SOFT_BLUE,
+                DARK_BLUE)
           ],
         ),
       ),
