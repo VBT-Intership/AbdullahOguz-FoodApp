@@ -51,76 +51,79 @@ class VerticalFoodCard extends StatelessWidget {
               width: 85,
               height: 85,
             ),
-            Container(
-              width: MediaQuery.of(context).size.width * 0.56,
-              margin: const EdgeInsets.only(left: 13),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    foodTitle,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.5,
-                        letterSpacing: 0.3,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                            color: softClip1,
-                            borderRadius: BorderRadius.circular(6)),
-                        width: 70,
-                        height: 28,
-                        child: Center(
-                          child: Text(
-                            foodClip1,
-                            style: TextStyle(color: deepClip1),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            color: softClip2,
-                            borderRadius: BorderRadius.circular(6)),
-                        margin: EdgeInsets.only(left: 5),
-                        width: 70,
-                        height: 28,
-                        child: Padding(
-                          padding: const EdgeInsets.all(5.0),
+            Expanded(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.56,
+                margin: const EdgeInsets.only(left: 13),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      foodTitle,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.5,
+                          letterSpacing: 0.3,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          decoration: BoxDecoration(
+                              color: softClip1,
+                              borderRadius: BorderRadius.circular(6)),
+                          width: 70,
+                          height: 28,
                           child: Center(
                             child: Text(
-                              foodClip2,
-                              style: TextStyle(color: deepClip2),
+                              foodClip1,
+                              style: TextStyle(color: deepClip1),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 6),
-                    child: Row(
-                      children: [
-                        Text("Warung buyakuk",
-                            style: TextStyle(
-                                color: Colors.black38,
-                                fontWeight: FontWeight.w600)),
-                        Spacer(),
-                        Text(
-                          "Rp. $price",
-                          style: TextStyle(
-                              letterSpacing: 0.2, fontWeight: FontWeight.w600),
+                        Container(
+                          decoration: BoxDecoration(
+                              color: softClip2,
+                              borderRadius: BorderRadius.circular(6)),
+                          margin: EdgeInsets.only(left: 5),
+                          width: 70,
+                          height: 28,
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Center(
+                              child: Text(
+                                foodClip2,
+                                style: TextStyle(color: deepClip2),
+                              ),
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                    Container(
+                      padding: EdgeInsets.only(top: 6),
+                      child: Row(
+                        children: [
+                          Text("Warung buyakuk",
+                              style: TextStyle(
+                                  color: Colors.black38,
+                                  fontWeight: FontWeight.w600)),
+                          Spacer(),
+                          Text(
+                            "Rp. $price",
+                            style: TextStyle(
+                                letterSpacing: 0.2,
+                                fontWeight: FontWeight.w600),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

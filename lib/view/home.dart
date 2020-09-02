@@ -39,10 +39,10 @@ class HomeView extends StatelessWidget {
         color: WHITE_GRAY,
         child: Column(
           children: [
-            searhArea(),
-            horizontalListArea(context),
-            popularCard(),
-            verticalListArea(context)
+            Expanded(flex: 2, child: searhArea()),
+            Expanded(flex: 3, child: horizontalListArea(context)),
+            Expanded(flex: 2, child: popularCard()),
+            Expanded(flex: 4, child: verticalListArea(context))
           ],
         ),
       ),
@@ -54,7 +54,7 @@ class HomeView extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.446,
       child: Padding(
-        padding: EdgeInsets.only(top: 20, left: 30, right: 30),
+        padding: EdgeInsets.only(left: 30, right: 30),
         child: ListView(
           children: [
             VerticalFoodCard(
